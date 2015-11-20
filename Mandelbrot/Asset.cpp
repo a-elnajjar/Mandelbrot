@@ -1,18 +1,18 @@
 #include "Asset.hpp"
 
-double mapToReal(int x, int imgWidth, double minR, double maxR)
+double mapToReal(const int& x, const int& imgWidth, const double& minR, const double& maxR)
 {
 	double range = maxR - minR;
 	return x * (range / imgWidth) + minR;
 }
 
-double mapToImaginary(int y, int imgHeight, double minI, double maxI)
+double mapToImaginary(const int& y, const int& imgHeight, const double& minI, const double& maxI)
 {
 	double range = maxI - minI;
 	return y * (range / imgHeight) + minI;
 }
 
-int findMandelbrot(double cr, double ci, int maxItr)
+int findMandelbrot(const double& cr, const double& ci, const int& maxItr)
 {
 	int i = 0;
 	double zr = 0.0, zi = 0.0;

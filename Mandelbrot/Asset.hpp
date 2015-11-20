@@ -1,4 +1,4 @@
 #pragma once
-double mapToReal(int x, int imgWidth, double minR, double maxR);
-double mapToImaginary(int y, int imgHeight, double minI, double maxI);
-int findMandelbrot(double cr, double ci, int maxItr);
+double mapToReal(const int& x,const int& imgWidth, const double& minR, const double& maxR);
+double mapToImaginary(const int& y,const int& imgHeight,const double& minI,const double& maxI);
+int findMandelbrot(const double& cr,const double& ci,const int& maxItr);
