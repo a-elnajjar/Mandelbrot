@@ -1,11 +1,14 @@
 #include<iostream>
 #include<fstream>
 #include "Asset.hpp"
+#include <chrono>
 using namespace std;
 
 
 int main()
 {
+
+	auto t0 = std::chrono::high_resolution_clock::now();
 	ifstream readFile("input.txt");
 	int imgWidth, imgHeight, maxN;
 	double minR, maxR, minI, maxI;
@@ -44,7 +47,9 @@ int main()
 		writeFile << endl;
 	}
 	writeFile.close();
-	cout << "finished " << endl;
-
+	
+	auto t1 = std::chrono::high_resolution_clock::now();
+	auto dt = 1.e-9*std::chrono::duration_cast<std::chrono::nanoseconds>(t1 - t0).count();
+	cout << "finished.time "<< dt << endl;
 	return 0;
 }
