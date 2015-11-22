@@ -7,7 +7,6 @@ using namespace std;
 
 int main()
 {
-
 	auto t0 = std::chrono::high_resolution_clock::now();
 	ifstream readFile("input.txt");
 	int imgWidth, imgHeight, maxN;
